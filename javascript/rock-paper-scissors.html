@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="script" href="RPS-script.js" />
+		<title>R-P-S</title>
+	</head>
+	<body>
+		<script>
+			//The user should imput a choice (Rock, paper or scissors)
+			//There should be a function that gets a choice form the computer
+			//there should be a function that evaluates who wins the round
+			//the result should be displayed to the user
+
+			function getComputerChoice() {
+				const choice = ["rock", "paper", "scissors"];
+				const indexRandom = Math.floor(Math.random() * choice.length);
+				return choice[indexRandom];
+			}
+
+			function playRound(playerSelection, computerSelection) {
+				const outcomes = {
+					rock: { beats: "scissors", losesTo: "paper" },
+					paper: { beats: "rock", losesTo: "scissors" },
+					scissors: { beats: "paper", losesTo: "rock" },
+				};
+
+				playerSelection = playerSelection.toLowerCase();
+
+				if (!outcomes[playerSelection]) {
+					return "Input invalid. Please select Rock, Paper or Scissors";
+				}
+
+				if (outcomes[playerSelection].beats === computerSelection) {
+					return `Yay! you won. ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`;
+				} else if (outcomes[playerSelection].losesTo === computerSelection) {
+					return `Aww, better luck next time. ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`;
+				} else {
+					return "Wow! that's a tie!";
+				}
+			}
+
+			const playerChoice = prompt(
+				" Please choose Rock, Paper or Scissors"
+			).toLowerCase();
+			const computerChoice = getComputerChoice();
+			console.log(playRound(playerChoice, computerChoice));
+		</script>
+	</body>
+</html>
