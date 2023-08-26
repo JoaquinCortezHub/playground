@@ -8,6 +8,8 @@
 	</head>
 	<body>
 		<script>
+			//Project Date: 08/26/23
+			
 			//The user should imput a choice (Rock, paper or scissors)
 			//There should be a function that gets a choice form the computer
 			//there should be a function that evaluates who wins the round
@@ -41,11 +43,34 @@
 				}
 			}
 
-			const playerChoice = prompt(
-				" Please choose Rock, Paper or Scissors"
-			).toLowerCase();
-			const computerChoice = getComputerChoice();
-			console.log(playRound(playerChoice, computerChoice));
+			function game() {
+				let playerScore = 0;
+				let computerScore = 0;
+
+				for (i = 1; i <= 5; i++) {
+					const playerChoice = prompt(`Round ${i}: Choose Rock, Paper, or Scissors`).toLowerCase();
+					const computerChoice = getComputerChoice();
+					const result = playRound(playerChoice, computerChoice);
+
+					if (result.includes("won")) {
+						playerScore++;
+					} else if (result.includes("lost")) {
+						computerScore++;
+					}
+
+					console.log(`Round ${i}: ${result}`);
+				}
+
+				if (playerScore > computerScore) {
+					console.log("Congratulations! you won the game!");
+				} else if (playerScore < computerScore) {
+					console.log("Man... you suck. You lost the game.");
+				} else {
+					console.log("Boring, it's a tie.");
+				}
+			}
+
+			game();
 		</script>
 	</body>
 </html>
