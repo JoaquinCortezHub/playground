@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="script" href="RPS-script.js" />
-		<title>R-P-S</title>
-	</head>
-	<body>
-		<script>
-			//Project Date: 08/26/23
-			
+//Project Date: 08/26/23
+
 			//The user should imput a choice (Rock, paper or scissors)
 			//There should be a function that gets a choice form the computer
 			//there should be a function that evaluates who wins the round
@@ -48,7 +38,9 @@
 				let computerScore = 0;
 
 				for (i = 1; i <= 5; i++) {
-					const playerChoice = prompt(`Round ${i}: Choose Rock, Paper, or Scissors`).toLowerCase();
+					const playerChoice = prompt(
+						`Round ${i}: Choose Rock, Paper, or Scissors`
+					).toLowerCase();
 					const computerChoice = getComputerChoice();
 					const result = playRound(playerChoice, computerChoice);
 
@@ -71,6 +63,3 @@
 			}
 
 			game();
-		</script>
-	</body>
-</html>
