@@ -15,3 +15,8 @@ What I learned:
     I learned how to pick a random string from an array.
     I learned how to create a counter to keep track of scores.
     I improved my logic skills by using loops and if-else statements.
+
+images used in the UI by:
+<a href="https://www.flaticon.com/free-icons/fist" title="fist icons">Fist icons created by Cuputo - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/scissors" title="scissors icons">Scissors icons created by Cap Cool - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/open-hands" title="open hands icons">Open hands icons created by Icon Mart - Flaticon</a>

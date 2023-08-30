@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="stylesheet.css" />
+		<title>RPS | Joaquin Cortez</title>
+	</head>
+	<body>
+		<div class="rps-section">
+			<h1 class="section-heading">Welcome to Rock, Paper, Scissors!</h1>
+			<div class="display-wrapper" id="display-wrapper">
+				<div class="count-wrapper">
+					<div class="count-card">
+						<p class="count-text">Player</p>
+						<div class="number-wrap">
+							<span class="player-score">0</span>
+						</div>
+					</div>
+					<div class="count-label">
+						<h3 class="label-text">VS.</h3>
+					</div>
+					<div class="count-card">
+						<p class="count-text">CPU</p>
+						<div class="number-wrap">
+							<span class="cpu-score">0</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h3 class="section-sub">Please choose an option to start</h3>
+			<div class="options-wrapper">
+				<div class="button">
+					<img
+						class="option-image"
+						id="rock"
+						src="Images/fist.png"
+						alt="closed fist"
+					/>
+					<p class="option-label">Rock</p>
+				</div>
+				<div class="button">
+					<img
+						class="option-image"
+						id="paper"
+						src="Images/palm.png"
+						alt="palm open"
+					/>
+					<p class="option-label">Paper</p>
+				</div>
+				<div class="button">
+					<img
+						class="option-image"
+						id="scissors"
+						src="Images/scissors.png"
+						alt="hand doing a scissors shape"
+					/>
+					<p class="option-label">Scissors</p>
+				</div>
+			</div>
+		</div>
+		<script src="RPS-script.js"></script>
+	</body>
+</html>
